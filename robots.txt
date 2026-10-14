@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://taswin77.github.io/Taswin/sitemap.xml
