@@ -1,0 +1,15 @@
+{
+  "id": ".",
+  "name": "Shuttle — Badminton Training",
+  "short_name": "Shuttle",
+  "description": "A focused training planner for competitive badminton players.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f3ee",
+  "theme_color": "#f4f3ee",
+  "icons": [
+    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
