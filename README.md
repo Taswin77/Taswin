@@ -2,6 +2,10 @@
 
 Shuttle is a lightweight, installable web app for a competitive badminton player's weekly training rhythm. It includes six varied sessions plus a recovery day, effort targets, session completion tracking, a streak, and a player card. All profile and completion data stays in the browser on the device.
 
+Live app: https://taswin77.github.io/Taswin/
+
+The site includes a canonical URL, structured app metadata, an XML sitemap, a robots.txt sitemap reference, and an IndexNow key for search discovery. Search engines decide whether and when to index the app.
+
 ## Install on Android
 
 The app needs to be hosted over HTTPS to install and work offline. Open its hosted URL in Chrome on Android, then choose **Install app** (or **Add to Home screen**) from Chrome's menu. The app has no server or paid service dependency.
