@@ -31,6 +31,7 @@
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="icon" href="icon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="runner.css" />
     <title>Shuttle Badminton Training Planner | Free Android App</title>
   </head>
   <body>
@@ -69,6 +70,36 @@
       <div class="toast" id="toast" role="status"></div>
     </div>
     <dialog id="profile-dialog"><form method="dialog" class="profile-form"><button class="close-button" aria-label="Close">×</button><p class="eyebrow">MAKE IT YOURS</p><h2>Your player card</h2><label for="name-input">Name</label><input id="name-input" maxlength="30" placeholder="Your name" /><label for="focus-input">Season focus</label><input id="focus-input" maxlength="60" placeholder="e.g. Faster first step" /><p class="form-hint">Your details stay on this device.</p><button class="primary-button" id="save-profile" value="save">Save profile</button></form></dialog>
+    <dialog id="workout-dialog" class="workout-dialog" aria-labelledby="runner-title">
+      <section class="workout-runner">
+        <button class="close-button" id="runner-close" aria-label="Close workout">×</button>
+        <p class="eyebrow" id="runner-kicker">MOVEMENT PREVIEW</p>
+        <h2 id="runner-title">Get ready</h2>
+        <div class="model-scene" id="model-scene" aria-label="Animated 3D-style badminton athlete model">
+          <div class="model-floor"></div>
+          <div class="athlete" id="athlete" role="img" aria-label="Athlete demonstration">
+            <div class="athlete-turn">
+              <div class="athlete-head"></div><div class="athlete-neck"></div>
+              <div class="athlete-torso"></div><div class="athlete-hip"></div>
+              <div class="athlete-arm arm-left"><i></i></div><div class="athlete-arm arm-right"><i></i></div>
+              <div class="athlete-leg leg-left"><i></i></div><div class="athlete-leg leg-right"><i></i></div>
+              <div class="athlete-racket"><i></i></div>
+            </div>
+          </div>
+          <span class="model-caption">DRAG TO ROTATE · MOVEMENT DEMO</span>
+        </div>
+        <div class="runner-step-count" id="runner-step-count"></div>
+        <div class="runner-cue"><strong id="runner-step-name"></strong><p id="runner-step-cue"></p></div>
+        <div class="runner-timer" id="runner-timer" hidden>
+          <span class="timer-caption" id="timer-caption">UP NEXT</span>
+          <strong id="timer-clock">00:00</strong>
+          <div class="timer-track"><span id="timer-fill"></span></div>
+        </div>
+        <div class="runner-actions" id="preview-actions"><button class="secondary-button" id="preview-previous" aria-label="Previous movement">‹</button><button class="primary-button" id="start-workout">Start workout</button><button class="secondary-button" id="preview-next" aria-label="Next movement">›</button></div>
+        <div class="runner-actions" id="timer-actions" hidden><button class="secondary-button" id="end-workout">End</button><button class="primary-button" id="pause-workout">Pause</button><button class="secondary-button" id="skip-step">Next</button></div>
+      </section>
+    </dialog>
     <script src="app.js"></script>
   </body>
 </html>
+
