@@ -175,6 +175,7 @@ $('#pause-workout').addEventListener('click',()=>{
 $('#skip-step').addEventListener('click',advanceRunner);
 $('#end-workout').addEventListener('click',()=>{closeRunner();toast('Workout timer stopped.');});
 $('#workout-dialog').addEventListener('click',event=>{if(event.target===$('#workout-dialog'))closeRunner();});
+$('#workout-dialog').addEventListener('cancel',()=>{clearInterval(runnerTimer);runnerTimer=null;runnerMode='preview';});
 let dragX=null, dragYaw=-18;
 $('#model-scene').addEventListener('pointerdown',event=>{dragX=event.clientX;$('#model-scene').setPointerCapture(event.pointerId);});
 $('#model-scene').addEventListener('pointermove',event=>{if(dragX===null)return;dragYaw+=(event.clientX-dragX)*.7;dragX=event.clientX;$('#athlete').style.setProperty('--yaw',`${dragYaw}deg`);});
